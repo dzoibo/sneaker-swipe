@@ -141,13 +141,14 @@ function animateClickImg(clickedImg, index = undefined) {
         duration: duration,
         ease: "power1.out",
         onComplete: () => {
-          if (index) {
+          if (index>=0) {
             shoes.forEach((img) => {
               img.classList.add("hidden");
             });
             shoesCard.forEach((card) => {
               card.classList.remove("border-2");
             });
+            console.log(index);
             shoes[index].classList.remove("hidden");
             shoesCard[index].classList.add("border-2");
           }
