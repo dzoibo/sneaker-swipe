@@ -36,7 +36,11 @@ prev.addEventListener("click",()=>{
     shoes.forEach((item) => {
         item.classList.add("hidden");
         redDunk.classList.remove("hidden");
-      });
+    });
+    shoesCard.forEach((item) => {
+        item.classList.remove("border-2");
+        shoesCard[0].classList.add("border-2");
+    });
     gsap.to(airMax,{
         top: 0,
         right:0,
