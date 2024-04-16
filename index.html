@@ -5,15 +5,133 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VITE APP / SCSS / GSAP / TAILWIND</title>
+  <title>sneaker-swipe</title>
 </head>
 
 <body>
-  <div id="app">
-    <div class="w-full flex items-center justify-center p-4">
-      <h1 className="text-3xl font-bold underline">
-        FUN ANIMATION TEMPLATE
-      </h1>
+  <div class="flex h-screen w-screen overflow-x-hidden flex-col">
+
+    <div class="w-full flex items-center justify-center bg-[#F5F5F5]">
+      <header class="bg-white px-20 md:px-[92px] h-20 w-full flex items-center justify-between">
+        <div class="bold text-2xl mr-4 poppins-bold">Sneakers</div>
+        <div class="flex gap-4 md:gap-5 poppins-medium cursor-pointer">
+          <div class="hover:underline">Nouveauté du moment</div>
+          <div class="hover:underline">Homme </div>
+          <div class="hover:underline">Femme</div>
+          <div class="hover:underline">Enfant</div>
+          <div class="hover:underline">Promotions</div>
+        </div>
+        <div class="flex items-center rounded-[52px] border border-[#E2E8F0] ">
+          <img src="./public/images/Search.svg" class="mx-4" alt="search">
+          <input class="outline-none border-0 bg-transparent h-12 placeholder:text-[#64748B]" id="search" placeholder="Rechercher">
+        </div>
+        <div class="flex">
+          <img class="cursor-pointer" src="./public/images/icon.png" alt="notification">
+          <img src="./public/images/avatar.png" class="cursor-pointer" alt="avatar">
+        </div>
+      </header>
+    </div>
+
+    <div class="poppins-medium text-sm flex justify-center items-center min-h-14 h-14 bg-[#F5F5F5]">
+      <span class="cursor-pointer">VOIR TOUTES LES NOUVEAUTÉS</span> 
+      <span class="text-xs ml-5 cursor-pointer underline">Acheter</span>
+    </div>
+    <div class="grow justify-between flex bg-[#EDEDED] px-[69px] items-start pt-10">
+      <div class="border overflow-hidden w-[400px] h-[500px] relative">
+        <div class="absolute left-0 top-0" id="dunk-description">
+          <h1 class="poppins-semibold text-[52px] " >Nike dunk low</h1>
+          <h6 class="h-10 poppins-regular">Chaussure sur homme</h6>
+          <div class="mb-[71px] text-[52px]">$199 <span class="line-through text-[#A0A0A0]">$1499</span></div>
+          <div>
+            <img src="./public/images/shoes.png" alt="shoes">
+          </div>
+        </div>
+        
+        <div class="absolute left-[-500px] top-0 " id="max-description">
+          <h1 class="poppins-semibold text-[52px] ">Nike AIR MAX PLUS</h1>
+          <h6 class="h-10 poppins-regular">Chaussure sur homme</h6>
+          <div class="mb-[71px] text-[52px]">$250 <span class="line-through text-[#A0A0A0]">$300</span></div>
+          <div>
+            <img src="./public/images/shoes.png" alt="shoes">
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="flex flex-col items-center z-0">
+        <div class="mb-24 mt-32 w-[593px] h-[376px] relative">
+            <img class="absolute shoes-max" src="./public/images/shoes_max.png" alt="shoes">
+            <img class="absolute left-0 top-0 shoes-image red-dunk" src="./public/images/shoes_red.png" alt="shoes">
+            <img class="absolute shoes-image hidden" src="./public/images/shoes_clear.png" alt="shoes">
+            <img class="absolute shoes-image hidden" src="./public/images/shoes_blue.png" alt="shoes">
+            <img class="absolute shoes-image hidden" src="./public/images/shoes_black.png" alt="shoes">
+        </div>
+
+        <div class=" rounded-[18px] h-16 mb-4 flex justify-between px-11 items-center">
+          <div class="items-center flex">
+            <div class="back "> <img class="h-10 w-10 " src="./public/images/small/arrow-circle-left.svg" alt=""></div>
+            <div class="ml-[33px] next"> <img class="h-10 w-10 " src="./public/images/small/arrow-circle-right.svg" alt=""></div>
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="relative w-1/4 max-w-[295px] h-[500px] overflow-hidden z-10">
+        <div class="rounded-3xl overflow-hidden h-[500px] bg-white  max-w-[295px] absolute top-0 right-0  p-5 poppins"  id="dunk-card">
+          <div class="h-6 ">Size</div>
+          <div class="flex gap-2 mb-6">
+            <div class="rounded-[50%] border border-black text-white bg-black h-9 w-9 flex justify-center items-center">37</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">38</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">39</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">40</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">41</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">42</div>
+          </div>
+          <div>
+            Select color
+            <div class="card-container">
+              <img src="./public/images/small/red.png" class="shoes-card border-[#F21544] card-red rounded-[10.33px]" alt="shoes">
+              <img src="./public/images/small/pink.png" class="shoes-card border-[#FFAEAE]  rounded-[10.33px]" alt="shoes">
+            </div>
+  
+            <div class="card-container">
+              <img src="./public/images/small/blue.png" class="shoes-card border-[#3B58AB]  rounded-[10.33px]" alt="shoes">
+              <img src="./public/images/small/black.png" class="shoes-card border-black  rounded-[10.33px]" alt="shoes">
+            </div>
+  
+            <div class="text-white w-[255px] bg-black h-10 rounded-[52px] mb-4 mt-7 flex justify-center items-center cursor-pointer ">Ajouter au panier</div>
+            <div class="text-black border border-black w-[255px] bg-white mb-5 h-10 rounded-[52px]  flex justify-center items-center cursor-pointer">Ajouter aux favoris</div>
+          </div>
+        </div>
+        <div class="rounded-3xl  overflow-hidden h-[500px] bg-white  max-w-[295px] absolute top-0 right-[-500px]   p-5 poppins" id="max-card">       
+          <div class="h-6 ">Size</div>
+          <div class="flex gap-2 mb-10">
+            <div class="rounded-[50%] border border-black text-white bg-black h-9 w-9 flex justify-center items-center">37</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">38</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">39</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">40</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">41</div>
+            <div class="rounded-[50%] text-black border border-black bg-white h-9 w-9 flex justify-center items-center">42</div>
+          </div>
+          <div class="opacity-[0.5]">
+            Select color
+            <div class="card-container">
+              <img src="./public/images/small/max-card.png" alt="shoes">
+              <img src="./public/images/small/max-card.png" alt="shoes">
+            </div>
+  
+            <div class="card-container">
+              <img src="./public/images/small/max-card.png" alt="shoes">
+              <img src="./public/images/small/max-card.png" alt="shoes">
+            </div>
+  
+          </div>
+          
+          <div class="text-white w-[255px] bg-black h-10 rounded-[52px] mb-4 mt-7 flex justify-center items-center cursor-pointer">Ajouter au panier</div>
+          <div class="text-black border border-black w-[255px] bg-white mb-5 h-10 rounded-[52px]  flex justify-center items-center cursor-pointer">Ajouter aux favoris</div>
+        </div>
+      </div>
     </div>
   </div>
   <script type="module" src="/main.js"></script>
